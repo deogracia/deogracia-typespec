@@ -1,32 +1,60 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "TypeSpec",
-	"patterns": [
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "TypeSpec",
+  "scopeName": "source.tsp",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#keywords" },
+    { "include": "#types" },
+    { "include": "#decorators" }
+  ],
+  "repository": {
+    "comments": { "patterns": [
 		{
-			"include": "#keywords"
+			"name": "comment.line.double-dash.typespec",
+			"match": "//.*$"
 		},
 		{
-			"include": "#strings"
+			"name":"comment.block.typespec",
+			"begin": "/\\*",
+			"end": "\\*/"
 		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.typespec",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.typespec",
+	] },
+    "strings": { "patterns": [
+		{
+			"name":"string.quoted.double.typespec",
 			"begin": "\"",
 			"end": "\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.typespec",
-					"match": "\\\\."
+					"name":"constant.character.escape.typespec",
+					"match": "\\\\"
 				}
 			]
 		}
-	},
-	"scopeName": "source.tsp"
+	] },
+    "keywords": { "patterns": [
+		{
+			"name": "keyword.control.typespec",
+			"match": "\\b(alias|enum|interface|model|op|namespace|op|union|scalar)\\b"
+		},
+		{
+			"name": "keyword.other.import.typespec",
+			"match": "\\b(import|using)\\b"
+		}
+	] },
+    "types": { "patterns": [
+		{
+			"name": "support.type.primitive.typespec",
+			"match": "\\b(boolean|bytes|decimal|decimal128integer|duration|float|float32|float64|int8|int16|int32|int64|never|null|offsetDateTime|plainDate|plainTime|safeint|string|uint8|uint16|uint32|uint64|unknown|url|utcDateTime|void)\\b"
+		}
+	] },
+    "decorators": { "patterns": [
+		{
+			"name":"entity.name.function.annotation.typespec",
+			"match": "@[a-zA-Z_$][a-zA-Z_$]*"
+		}
+	] }
+  }
 }

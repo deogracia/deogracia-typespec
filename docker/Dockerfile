@@ -1,7 +1,7 @@
 FROM node:24-alpine3.23
 
 # Installer les outils globaux
-RUN npm install -g yo generator-code
+RUN npm install -g yo generator-code npm
 
 # Créer le dossier de travail et donner les droits à l'utilisateur 'node'
 WORKDIR /app

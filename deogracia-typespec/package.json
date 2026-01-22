@@ -1,0 +1,25 @@
+{
+  "name": "deogracia-typespec",
+  "displayName": "TypeSpec - DeoGracia",
+  "description": "TypSpec Language support for VSCodium",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.108.1"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "typespec",
+      "aliases": ["TypeSpec", "typespec"],
+      "extensions": [".tsp"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "typespec",
+      "scopeName": "source.tsp",
+      "path": "./syntaxes/typespec.tmLanguage.json"
+    }]
+  }
+}

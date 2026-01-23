@@ -11,3 +11,4 @@ While waiting for official https://marketplace.visualstudio.com/items?itemName=t
 ## Usage
 
 * get into node container: `docker compose -f .\docker\docker-compose.yaml run --build -it node /bin/ash`
+* package: `docker compose -f .\docker\docker-compose.yaml run --build -it node vsce package --out dist/`

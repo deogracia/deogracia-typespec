@@ -1,8 +1,10 @@
 {
-  "name": "deogracia-typespec",
+  "name": "typespec",
   "displayName": "TypeSpec - DeoGracia",
   "description": "TypSpec Language support for VSCodium",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "publisher": "deogracia",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.108.1"
   },
@@ -21,5 +23,9 @@
       "scopeName": "source.tsp",
       "path": "./syntaxes/typespec.tmLanguage.json"
     }]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deogracia/deogracia-typespec"
   }
 }

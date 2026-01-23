@@ -2,4 +2,4 @@ services:
   node:
     build: .
     volumes:
-      - .:/app
+      - ../.:/app

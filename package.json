@@ -2,7 +2,7 @@
   "name": "typespec",
   "displayName": "TypeSpec - DeoGracia",
   "description": "TypSpec Language support for VSCodium",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "publisher": "deogracia",
   "license": "MIT",
   "engines": {

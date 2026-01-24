@@ -18,7 +18,7 @@ Later, I hope I can add:
 
 ## Requirements
 
-No requirement as far as I undestand.
+* vscodium > 1.108.1
 
 ## Known Issues
 
@@ -29,4 +29,4 @@ No requirement as far as I undestand.
 ### 1.0.0
 
 Initial release
-* Add only coloration of your code.
+* Add coloration of your code.

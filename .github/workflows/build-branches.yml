@@ -30,4 +30,4 @@ jobs:
       - name: Build docker compose stack
         run: docker compose -f ${{ github.workspace }}/docker/docker-compose.yaml build
       - name: Build vscodium extension
-        run: docker compose -f ${{ github.workspace }}/docker/docker-compose.yaml run --build node vsce package --out dist/
+        run: docker compose -f ${{ github.workspace }}/docker/docker-compose.yaml run --build node vsce package --out ${{ github.workspace }}/dist/

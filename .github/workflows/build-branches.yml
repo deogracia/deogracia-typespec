@@ -29,5 +29,6 @@ jobs:
         run: docker compose version
       - name: Build docker compose stack
         run: docker compose -f ${{ github.workspace }}/docker/docker-compose.yaml build
+      - run: docker compose -f ${{ github.workspace }}/docker/docker-compose.yaml run node ls -lha
       - name: Build vscodium extension
         run: docker compose -f ${{ github.workspace }}/docker/docker-compose.yaml run --build node vsce package --out ${{ github.workspace }}/dist/

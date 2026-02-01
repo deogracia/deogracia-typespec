@@ -34,4 +34,4 @@ jobs:
       - name: Build vscodium extension
         run: docker compose -f ${{ github.workspace }}/docker/docker-compose.yaml run --build node vsce package --out ./dist/
       - name: "Test that extension can be installed"
-        run: npx @vscode/vsce ls --package deogracia-typespec-*.vsix
+        run: npx @vscode/vsce ls --tree ./dist/deogracia-typespec-*.vsix

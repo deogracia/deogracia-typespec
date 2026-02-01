@@ -33,4 +33,4 @@ jobs:
       - run: docker compose -f ${{ github.workspace }}/docker/docker-compose.yaml run node ls -lha
       - run: docker compose -f ${{ github.workspace }}/docker/docker-compose.yaml run node mkdir -p ./dist/lionel
       - name: Build vscodium extension
-        run: docker compose -f ${{ github.workspace }}/docker/docker-compose.yaml run --build node vsce package --out ${{ github.workspace }}/dist/
+        run: docker compose -f ${{ github.workspace }}/docker/docker-compose.yaml run --build node vsce package --out ./dist/

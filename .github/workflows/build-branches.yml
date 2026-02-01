@@ -27,10 +27,11 @@ jobs:
           version: latest
       - name: Get docker compose version
         run: docker compose version
-      - run: chmod 777 ./dist
+      - name: "Make ./dist world writable"
+        run: chmod 777 ./dist
       - name: Build docker compose stack
         run: docker compose -f ${{ github.workspace }}/docker/docker-compose.yaml build
-      - run: docker compose -f ${{ github.workspace }}/docker/docker-compose.yaml run node ls -lha
-      - run: docker compose -f ${{ github.workspace }}/docker/docker-compose.yaml run node mkdir -p ./dist/lionel
       - name: Build vscodium extension
         run: docker compose -f ${{ github.workspace }}/docker/docker-compose.yaml run --build node vsce package --out ./dist/
+      - name: "Test that extension can be installed"
+        run: npx @vscode/vsce ls --package deogracia-typespec-*.vsix

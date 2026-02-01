@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "publisher": "deogracia",
   "license": "MIT",
+  "icon": "icon/icon.png",
   "engines": {
     "vscode": "^1.108.1"
   },

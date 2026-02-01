@@ -17,3 +17,5 @@ While waiting for official https://marketplace.visualstudio.com/items?itemName=t
 
 * vscodium
 * [GraphicsGale](https://graphicsgale.com/us/) 2.10.01 to create icon
+* docker
+* docker compose

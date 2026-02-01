@@ -27,7 +27,7 @@ jobs:
           version: latest
       - name: Get docker compose version
         run: docker compose version
-      - run: touch ./dist/lionel
+      - run: chmod 777 ./dist
       - name: Build docker compose stack
         run: docker compose -f ${{ github.workspace }}/docker/docker-compose.yaml build
       - run: docker compose -f ${{ github.workspace }}/docker/docker-compose.yaml run node ls -lha

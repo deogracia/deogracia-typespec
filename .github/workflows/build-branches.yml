@@ -10,16 +10,16 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest]
-      runs-on: ${{ matrix.os }}
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v6.0.2
-        - name: Install Node.js
-          uses: actions/setup-node@v6.2.0
-          with:
-            node-version: "lts/1"
-        - name: "Setup Docker Compose"
-          uses: "docker/setup-compose-action@v1"
-          with:
-            version: latest
-        - run: docker compose version
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.2
+      - name: Install Node.js
+        uses: actions/setup-node@v6.2.0
+        with:
+          node-version: "lts/1"
+      - name: "Setup Docker Compose"
+        uses: "docker/setup-compose-action@v1"
+        with:
+          version: latest
+      - run: docker compose version
